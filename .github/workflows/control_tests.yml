@@ -1,0 +1,14 @@
+name: Pytest & flake8 control Push
+on: push
+jobs:
+  qa:
+    name: Check tests
+    runs_on: ubuntu-latest
+    steps:
+      - name: checkout on masterv3
+        uses: actions/checkout@
+
+      -name: Set up Python
+      uses: actions/setup-python@master
+      with: 
+        python-version: "3.x"
